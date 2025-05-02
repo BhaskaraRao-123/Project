@@ -1,0 +1,10 @@
+name: Testing workflow
+on: workflow_dispatch
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checking Testing
+      run: |
+        echo "second file also checked"
+        echo "practising very well"
