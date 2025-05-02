@@ -5,4 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checking Testing
-      run: echo "Testing is working good"
+      run: |
+        echo "Testing is working good"
+        echo "Checked"
