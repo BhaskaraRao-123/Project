@@ -1,12 +1,21 @@
-name: Events Demo
-on: [push, workflow_dispatch]
+
+
+name: Push Workflow
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-    deploy:
-        runs-on: ubuntu-latest
-        steps:
-         - name: Output  eventdata
-           run: echo "${{ toJSON(github.event) }}"
-         - name: Get code
-           run: actions/checkout@v3
-        
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a script
+        run: echo "This is a push event!"
+
 
